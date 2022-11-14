@@ -1,0 +1,21 @@
+.logo-enter {
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+
+.logo-enter-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.logo-exit {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.logo-exit-active {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all 500ms;
+}

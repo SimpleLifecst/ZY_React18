@@ -1,0 +1,12 @@
+$sidebar_background_color: #001529;
+
+// 菜单栏宽度
+$width_show: 256px;
+$width_hidden: 80px;
+
+/* 导出属性变量 */
+:export {
+  sidebarBackgroundColor: $sidebar_background_color;
+  widthShow: $width_show;
+  widthHidden: $width_hidden;
+}

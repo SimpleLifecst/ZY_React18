@@ -1,0 +1,183 @@
+.layout {
+  min-height: 100vh !important;
+
+  .sidebar-logo {
+    background-color: #001529;
+    overflow: hidden;
+    animation: alternate-reverse;
+    span {
+      color: #fff;
+      visibility: visible;
+    }
+    img {
+      width: 50px;
+      visibility: visible;
+    }
+
+    #title {
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    .left {
+      flex: 6;
+      .left-top {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 32px;
+        overflow: hidden;
+        .title {
+          font-weight: 1000;
+          font-size: 20px;
+          padding: 0 10px;
+        }
+      }
+
+      .left-bottom {
+        overflow: hidden;
+        height: 32px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 5px;
+    .hitokoto,
+    .from {
+      text-align: center;
+      color: rgb(153, 138, 138);
+    }
+
+    .from {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .hitokoto {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .antd-dropdown {
+    border: 1px solid red;
+  }
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+  .icon {
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ant-breadcrumb li a {
+    color: #000;
+  }
+
+  .ant-breadcrumb li:last-child a {
+    color: #00000073 !important;
+    pointer-events: none;
+  }
+
+  .ant-drawer {
+    overflow-x: hidden !important;
+    // 滚动条
+    ::-webkit-scrollbar-track-piece {
+      //滚动条凹槽的颜色，还可以设置边框属性
+      background-color: #000c17 !important;
+    }
+    ::-webkit-scrollbar {
+      //滚动条的宽度
+      width: 9px;
+      height: 9px;
+    }
+    ::-webkit-scrollbar-thumb {
+      //滚动条的设置
+      background-color: #dddddd;
+      background-clip: padding-box;
+      min-height: 28px;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #bbb;
+    }
+  }
+}
+
+// 菜单响应式适配一些
+@media screen and (max-width: 992px) {
+  .media-sidebar {
+    display: none;
+  }
+
+  .media-drawer-sidebar {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .media-drawer-sidebar {
+    display: none;
+  }
+}
+
+.logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .is-hidden {
+    visibility: hidden;
+    // opacity: 0;
+  }
+}
+
+.drawer-logo {
+  border-bottom: 1px solid #fafafa;
+  background-color: #fff;
+  span {
+    color: #000;
+  }
+}
+
+.logo-title {
+  font-size: 25px;
+  min-width: 200px;
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+}
